@@ -286,6 +286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 166474786}
+  - component: {fileID: 166474787}
   - component: {fileID: 166474785}
   - component: {fileID: 166474784}
   - component: {fileID: 166474783}
@@ -380,6 +381,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &166474787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166474782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c56a517ce338bf478d22c22e53b903a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAgent
+  jumpForce: 5
+  decisionInterval: 0.5
+  learningRate: 0.3
+  discountFactor: 0.5
+  initialEpsilon: 0.1
+  surviveReward: 0.05
+  pipePassReward: 100
+  collisionPenalty: 1000
+  gapNearThreshold: 0.8
+  gapNearReward: 0.5
+  gapMidThreshold: 2
+  gapMidReward: 0.1
+  gapFarPenalty: -0.1
+  maxYPosition: 4.5
+  minYPosition: 2
+  maxUpVelocity: 1
 --- !u!1 &325266958
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +543,6 @@ GameObject:
   - component: {fileID: 577312550}
   - component: {fileID: 577312549}
   - component: {fileID: 577312553}
-  - component: {fileID: 577312554}
   - component: {fileID: 577312555}
   m_Layer: 0
   m_Name: Player
@@ -643,19 +671,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &577312554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577312548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03ab87c1b8de589448c734cc759ad965, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  jumpForce: 5
 --- !u!114 &577312555
 MonoBehaviour:
   m_ObjectHideFlags: 0
